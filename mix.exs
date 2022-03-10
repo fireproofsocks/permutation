@@ -8,9 +8,8 @@ defmodule Permutation.MixProject do
     [
       aliases: aliases(),
       app: :permutation,
-      version: @version,
-      start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: description(),
       docs: [
         main: "readme",
         source_ref: "v#{@version}",
@@ -18,9 +17,7 @@ defmodule Permutation.MixProject do
         logo: "logo.png",
         extras: ["README.md", "CHANGELOG.md"]
       ],
-      test_coverage: [
-        tool: ExCoveralls
-      ],
+      package: package(),
       preferred_cli_env: [
         coveralls: :test,
         "coveralls.detail": :test,
@@ -29,7 +26,12 @@ defmodule Permutation.MixProject do
         "local.rebar": :prod,
         "deps.get": :prod,
         test_reset: :test
-      ]
+      ],
+      start_permanent: Mix.env() == :prod,
+      test_coverage: [
+        tool: ExCoveralls
+      ],
+      version: @version
     ]
   end
 
@@ -53,6 +55,37 @@ defmodule Permutation.MixProject do
       {:credo, "~> 1.6.1", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.26.0", runtime: false},
       {:excoveralls, "~> 0.14.0", only: [:dev, :test], runtime: false}
+    ]
+  end
+
+  defp description,
+    do: """
+    Permutation is an Elixir package and protocol for calculating the possible
+    permutations or combinations of an Enumerable.
+    """
+
+  def links do
+    %{
+      "GitHub" => @source_url,
+      "Readme" => "#{@source_url}/blob/v#{@version}/README.md",
+      "Changelog" => "#{@source_url}/blob/v#{@version}/CHANGELOG.md"
+    }
+  end
+
+  defp package do
+    [
+      maintainers: ["Everett Griffiths"],
+      licenses: ["Apache 2.0"],
+      logo: "assets/logo.png",
+      links: links(),
+      files: [
+        "lib",
+        "logo.png",
+        "mix.exs",
+        "README*",
+        "CHANGELOG*",
+        "LICENSE*"
+      ]
     ]
   end
 end
