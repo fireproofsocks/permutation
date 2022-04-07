@@ -1,5 +1,11 @@
 # Permutation
 
+[![Module Version](https://img.shields.io/hexpm/v/permutation.svg)](https://hex.pm/packages/permutation)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/permutation/)
+[![Total Download](https://img.shields.io/hexpm/dt/permutation.svg)](https://hex.pm/packages/permutation)
+[![License](https://img.shields.io/hexpm/l/permutation.svg)](https://hex.pm/packages/permutation)
+[![Last Updated](https://img.shields.io/github/last-commit/fireproofsocks/permutation.svg)](https://github.com/fireproofsocks/permutation/commits/master)
+
 This is an Elixir package that calculates [permutations](https://en.wikipedia.org/wiki/Permutation) of enumerables, including [combinations](https://en.wikipedia.org/wiki/Combination), where the order does not matter.
 
 This is implemented as an Elixir Protocol, which helps communiate the difference between permutations and combinations in way that is more familiar to Elixir programmers: the permutations of `List`s are true permutations, whereas the "permutations" of `MapSet`s are *combinations* (because `MapSet`s have no inherent order).
