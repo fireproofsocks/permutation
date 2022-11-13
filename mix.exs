@@ -2,7 +2,7 @@ defmodule Permutation.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/fireproofsocks/permutation"
-  @version "0.1.0"
+  @version "0.2.0"
 
   def project do
     [
@@ -51,16 +51,16 @@ defmodule Permutation.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:dialyxir, "~> 1.1.0", only: [:dev], runtime: false},
-      {:credo, "~> 1.6.1", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.26.0", runtime: false},
-      {:excoveralls, "~> 0.14.0", only: [:dev, :test], runtime: false}
+      {:dialyxir, "~> 1.2.0", only: [:dev], runtime: false},
+      {:credo, "~> 1.6.7", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.29.0", runtime: false},
+      {:excoveralls, "~> 0.15.0", only: [:dev, :test], runtime: false}
     ]
   end
 
   defp description,
     do: """
-    Permutation is an Elixir package and protocol for calculating the possible
+    Permutation is a package and protocol for calculating the possible
     permutations or combinations of an Enumerable.
     """
 

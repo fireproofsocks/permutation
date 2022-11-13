@@ -8,7 +8,7 @@
 
 This is an Elixir package that calculates [permutations](https://en.wikipedia.org/wiki/Permutation) of enumerables, including [combinations](https://en.wikipedia.org/wiki/Combination), where the order does not matter.
 
-This is implemented as an Elixir Protocol, which helps communiate the difference between permutations and combinations in way that is more familiar to Elixir programmers: the permutations of `List`s are true permutations, whereas the "permutations" of `MapSet`s are *combinations* (because `MapSet`s have no inherent order).
+This is implemented as an Elixir Protocol, which helps communiate the difference between permutations and combinations in way that is more familiar to Elixir programmers: the permutations of a `List` are true permutations, whereas the "permutations" of a `MapSet` are *combinations* (because `MapSet`s have no inherent order).
 
 ## Examples
 
