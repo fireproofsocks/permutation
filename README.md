@@ -12,7 +12,7 @@ This is implemented as an Elixir Protocol, which helps communiate the difference
 
 ## Examples
 
-The output of `Permutation.permute/2` is always a `MapSet`, regardless of the type of data that is evaluated.  This is because the possible permutations are not inherently ordered. The members of the outputted `MapSet` are of the same data type as the input. E.g. the permutation result of a `List` yields a `MapSet` of `List`s. The permutation result of a `MapSet` yields a `MapSet` of `MapSet`s.
+The output of `Permutation.permute/2` is always a `MapSet`, regardless of the type of data that is evaluated.  This is because the possible permutations are not inherently ordered. The members of the outputted `MapSet` are of the same data type as the input. E.g. the permutation result of a `List` yields a set of `List`s. The permutation result of a `MapSet` yields a set of `MapSet`s.
 
 The `:cardinality` option can be specified where only a subset of the original items should be returned.
 
@@ -62,7 +62,7 @@ This package can be installed by adding `permutation` to your list of dependenci
 ```elixir
 def deps do
   [
-    {:permutation, "~> 0.1.0"}
+    {:permutation, "~> 0.3.0"}
   ]
 end
 ```

@@ -2,7 +2,7 @@ defmodule Permutation.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/fireproofsocks/permutation"
-  @version "0.2.0"
+  @version "0.3.0"
 
   def project do
     [
@@ -51,10 +51,10 @@ defmodule Permutation.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:dialyxir, "~> 1.2.0", only: [:dev], runtime: false},
-      {:credo, "~> 1.6.7", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.29.0", runtime: false},
-      {:excoveralls, "~> 0.15.0", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7.18", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.4.7", only: [:dev], runtime: false},
+      {:ex_doc, "~> 0.40.1", runtime: false},
+      {:excoveralls, "~> 0.18.5", only: [:dev, :test], runtime: false}
     ]
   end
 
